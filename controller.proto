@@ -4,7 +4,7 @@ option optimize_for = LITE_RUNTIME;
 option cc_enable_arenas = false;
 
 package controller;
-option go_package = "DevKit-Neuro-server/proto/controller";
+option go_package = "Protobuf-DevKit-Neuro/proto/controller";
 
 message ChannelsDataSet{
   double channel1 = 1;
