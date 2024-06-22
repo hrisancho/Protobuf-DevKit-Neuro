@@ -25,17 +25,24 @@ message RawDataPack{
 message EmgMetric{
   ChannelsDataSet metrics = 1;
 }
-
+// Алгоритм используемый для проверки контрольной внутреннего сообщения и не только)
 enum CRCType{
   nothing = 0;
   crc16 = 1;
   crc32 = 2;
+}
+// Тип сообщение передающееся внутри другого(бинарно)
+enum MessageType{
+  channelsDataSet = 0;
+  rawDataPack = 1;
+  emgMetric = 2;
 }
 
 message MessageWitchCRC{
   bytes msg = 1;
   CRCType kind = 2;
   int64 crc = 3;
+  MessageType massage = 4; // Да я не знал как назвать, поэтому решил по угару назвать massage. Это просто мемный прикол
 } 
 
 /*
