@@ -29,13 +29,14 @@ enum MessageType{
   channelsDataSet = 0;
   rawDataPack = 1;
   emgMetric = 2;
+  string = 3;
 }
 
 message MessageWitchCRC{
   bytes msg = 1;
   CRCType kind = 2;
   int64 crc = 3;
-  MessageType type = 4; // Да я не знал как назвать, поэтому решил по угару назвать massage. Это просто мемный прикол
+  MessageType type = 4;
 } 
 
 /*
