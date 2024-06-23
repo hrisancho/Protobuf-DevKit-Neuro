@@ -18,6 +18,10 @@ message RawDataPack{
 message EmgMetric{
   ChannelsDataSet metrics = 1;
 }
+// На всякий случай для системных сообщений среди микросервисов
+message System{
+  string message = 1;
+}
 // Алгоритм используемый для проверки контрольной внутреннего сообщения и не только)
 enum CRCType{
   nothing = 0;
@@ -29,7 +33,7 @@ enum MessageType{
   channelsDataSet = 0;
   rawDataPack = 1;
   emgMetric = 2;
-  string = 3;
+  system = 3;
 }
 
 message MessageWitchCRC{
