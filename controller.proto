@@ -7,15 +7,8 @@ package controller;
 option go_package = "Protobuf-DevKit-Neuro/proto/controller";
 
 message ChannelsDataSet{
-  double channel1 = 1;
-  double channel2 = 2;
-  double channel3 = 3;
-  double channel4 = 4;
-  double channel5 = 5;
-  double channel6 = 6;
-  double channel7 = 7;
-  double channel8 = 8;
-  uint64 id = 9;
+  repeated double channel_mes = 1;
+  uint64 id = 2;
 }
 
 message RawDataPack{
@@ -42,7 +35,7 @@ message MessageWitchCRC{
   bytes msg = 1;
   CRCType kind = 2;
   int64 crc = 3;
-  MessageType massage = 4; // Да я не знал как назвать, поэтому решил по угару назвать massage. Это просто мемный прикол
+  MessageType type = 4; // Да я не знал как назвать, поэтому решил по угару назвать massage. Это просто мемный прикол
 } 
 
 /*
